@@ -12,17 +12,16 @@ export const fetchProductDetail = () => {
     }
 }
 
-export const handleDetail = (product) => {
-    console.log("hello from handleDetail");
+export const handleDetail = () => {
+    console.log("hello from cart");
     
     return {
-        type: HANDLE_DETAIL,
-        payload: product
+        type: HANDLE_DETAIL
     }
 }
 
 export const addToCart = (product) => {
-    console.log('hello from add cart')
+    console.log('hello from cart')
     return {
         type: ADD_TO_CART,
         payload: product

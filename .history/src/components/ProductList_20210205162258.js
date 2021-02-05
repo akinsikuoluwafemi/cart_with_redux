@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import Product from './Product';
-import { fetchProducts, fetchProductDetail, handleDetail, addToCart } from '../actions';
+import { fetchProducts, fetchProductDetail } from '../actions';
 import Title from './Title';
 
 
@@ -11,11 +11,7 @@ class ProductList extends Component {
     
     componentDidMount(){
         this.props.fetchProducts()
-        this.props.fetchProductDetail();
     }
-
-
-
     render() {
         console.log(this.props)
         return (
@@ -23,9 +19,7 @@ class ProductList extends Component {
             <div className="container">
               <Title name="our" title="products" />
               <div className="row"> 
-                    {this.props.products.map(product => {
-                        return <Product key={product.id} product={ product}/>
-                    })}
+                    <Product products={ this.props.products}/>
               </div>
             </div>
           </div>
@@ -34,10 +28,10 @@ class ProductList extends Component {
 }
 
 const mapStateToProps = (state) => {
+    
     return {
-        products: state.products.products,
-        productDetail: state.productDetail.productDetail
+        products: state.products.products
     }
 }
 
-export default connect(mapStateToProps, {fetchProducts, fetchProductDetail, handleDetail, addToCart})(ProductList);
+export default connect(mapStateToProps, {fetchProducts, fetchProductDetail})(ProductList);

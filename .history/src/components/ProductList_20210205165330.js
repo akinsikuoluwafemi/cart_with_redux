@@ -23,9 +23,7 @@ class ProductList extends Component {
             <div className="container">
               <Title name="our" title="products" />
               <div className="row"> 
-                    {this.props.products.map(product => {
-                        return <Product key={product.id} product={ product}/>
-                    })}
+                    <Product products={ this.props.products}/>
               </div>
             </div>
           </div>

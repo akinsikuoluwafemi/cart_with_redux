@@ -17,15 +17,13 @@ class ProductList extends Component {
 
 
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         return (
           <div className="py-5">
             <div className="container">
               <Title name="our" title="products" />
               <div className="row"> 
-                    {this.props.products.map(product => {
-                        return <Product key={product.id} product={ product}/>
-                    })}
+                    <Product products={ this.props.products}/>
               </div>
             </div>
           </div>
@@ -34,6 +32,7 @@ class ProductList extends Component {
 }
 
 const mapStateToProps = (state) => {
+    console.log(state)
     return {
         products: state.products.products,
         productDetail: state.productDetail.productDetail

@@ -24,7 +24,7 @@ class ProductList extends Component {
               <Title name="our" title="products" />
               <div className="row"> 
                     {this.props.products.map(product => {
-                        return <Product key={product.id} product={ product}/>
+                        return <Product key={} product={ product}/>
                     })}
               </div>
             </div>

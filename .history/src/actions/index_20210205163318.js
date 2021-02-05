@@ -22,7 +22,7 @@ export const handleDetail = (product) => {
 }
 
 export const addToCart = (product) => {
-    console.log('hello from add cart')
+    console.log('hello from cart')
     return {
         type: ADD_TO_CART,
         payload: product
