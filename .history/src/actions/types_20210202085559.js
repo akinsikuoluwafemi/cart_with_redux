@@ -1,0 +1,1 @@
+const FETCH_PRODUCTS = "H_PRODUCTS"
