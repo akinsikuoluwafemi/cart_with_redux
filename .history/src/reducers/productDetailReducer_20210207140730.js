@@ -3,7 +3,7 @@ import { FETCH_DETAIL_PRODUCT } from '../actions/types';
 
 
 const initialState = {
-    detailProduct: JSON.parse(localStorage.getItem('product')) || [],
+    detailProduct: JSON.parse(localStorage.getItem('product') || [],
     products: []
 
 }

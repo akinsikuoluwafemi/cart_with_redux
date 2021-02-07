@@ -6,11 +6,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 class Product extends Component {
-  
- 
-  
-
-
+    
   render(){
       
       // const { products } = this.props;
@@ -23,10 +19,7 @@ class Product extends Component {
                   <div className="card">
                     <div
                       className="img-container p-5"
-                      onClick={() => {
-                        fetchProductDetail(product);
-                        localStorage.setItem("product", JSON.stringify(product))
-                      }}
+                      onClick={() => fetchProductDetail(product)}
                     >
                       <Link to="/details">
                         <img

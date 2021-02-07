@@ -24,8 +24,7 @@ class Product extends Component {
                     <div
                       className="img-container p-5"
                       onClick={() => {
-                        fetchProductDetail(product);
-                        localStorage.setItem("product", JSON.stringify(product))
+                        
                       }}
                     >
                       <Link to="/details">

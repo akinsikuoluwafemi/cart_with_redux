@@ -23,9 +23,9 @@ class Product extends Component {
                   <div className="card">
                     <div
                       className="img-container p-5"
-                      onClick={() => {
-                        fetchProductDetail(product);
-                        localStorage.setItem("product", JSON.stringify(product))
+                      onClick={() =>
+                      {
+                        
                       }}
                     >
                       <Link to="/details">
