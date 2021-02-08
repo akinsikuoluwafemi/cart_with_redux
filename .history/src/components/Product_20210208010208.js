@@ -11,7 +11,7 @@ class Product extends Component {
   render(){
       
       // const { products } = this.props;
-        const { products, addToCart, fetchProductDetail, openModalAction, closeModalAction } = this.props;
+        const { products, addToCart, fetchProductDetail } = this.props;
         return (
           <>
             {products.map((product) => {
@@ -37,7 +37,6 @@ class Product extends Component {
                         disabled={product.inCart ? true : false}
                         onClick={() => {
                           addToCart(product);
-                          openModalAction(product)
                           product.count = 1;
                           product.inCart = true;
                           const price = product.price;
@@ -78,7 +77,7 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 
-export default connect(mapStateToProps, {addToCart, fetchProductDetail, openModalAction, closeModalAction}) (Product);
+export default connect(mapStateToProps, {addToCart, fetchProductDetail}) (Product);
 
 Product.propTypes = {
     products: PropTypes.shape({

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchProductDetail , addToCart, openModalAction, closeModalAction } from '../actions';
+import { fetchProductDetail , addToCart } from '../actions';
 import { Link } from 'react-router-dom';
 import {ButtonContainer } from './Button';
 
@@ -11,7 +11,7 @@ import {ButtonContainer } from './Button';
      
      
     render() {
-        const { productDetail, addToCart } = this.props;
+        const { productDetail, addToCart, cartItems } = this.props;
         console.log(productDetail)
       return (
         <div className="container py-5">
@@ -52,7 +52,6 @@ import {ButtonContainer } from './Button';
                   disabled={productDetail.inCart ? true : false}
                   onClick={() => {
                     addToCart(productDetail)
-                    openModalAction(productDetail);
                     productDetail.count = 1;
                     productDetail.inCart = true;
                     const price = productDetail.price;
@@ -61,7 +60,7 @@ import {ButtonContainer } from './Button';
 
                   }}
                 >
-                  {productDetail.inCart ? "inCart" : "add to cart"}
+                  {cartItems.inCart ? "inCart" : "add to cart"}
                 </ButtonContainer>
               </div>
             </div>
@@ -81,7 +80,7 @@ const mapStateToProps = (state) => {
     };
 }
 
-export default connect(mapStateToProps, {fetchProductDetail, addToCart, openModalAction, closeModalAction}) (Details);
+export default connect(mapStateToProps, {fetchProductDetail, addToCart}) (Details);
 
 
 

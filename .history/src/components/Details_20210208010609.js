@@ -52,7 +52,7 @@ import {ButtonContainer } from './Button';
                   disabled={productDetail.inCart ? true : false}
                   onClick={() => {
                     addToCart(productDetail)
-                    openModalAction(productDetail);
+                    open
                     productDetail.count = 1;
                     productDetail.inCart = true;
                     const price = productDetail.price;

@@ -32,7 +32,7 @@ export const openModalAction = (product) => {
     }
 }
 
-export const closeModalAction = () => {
+export const closeModalAction = (produc) => {
     return {
         type: CLOSE_MODAL,
     }

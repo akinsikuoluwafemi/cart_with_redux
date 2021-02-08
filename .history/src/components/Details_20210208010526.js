@@ -52,7 +52,6 @@ import {ButtonContainer } from './Button';
                   disabled={productDetail.inCart ? true : false}
                   onClick={() => {
                     addToCart(productDetail)
-                    openModalAction(productDetail);
                     productDetail.count = 1;
                     productDetail.inCart = true;
                     const price = productDetail.price;
@@ -81,7 +80,7 @@ const mapStateToProps = (state) => {
     };
 }
 
-export default connect(mapStateToProps, {fetchProductDetail, addToCart, openModalAction, closeModalAction}) (Details);
+export default connect(mapStateToProps, {fetchProductDetail, addToCart}) (Details);
 
 
 

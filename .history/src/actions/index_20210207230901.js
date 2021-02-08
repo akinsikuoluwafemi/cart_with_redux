@@ -1,4 +1,4 @@
-import { FETCH_PRODUCTS , FETCH_DETAIL_PRODUCT, OPEN_MODAL,CLOSE_MODAL , ADD_TO_CART} from './types';
+import { FETCH_PRODUCTS , FETCH_DETAIL_PRODUCT, OPEN_MODAL, ADD_TO_CART} from './types';
 
 export const fetchProducts = () => {
     return {
@@ -25,15 +25,6 @@ export const addToCart = (product) => {
 }
 
 
-export const openModalAction = (product) => {
-    return {
-        type: OPEN_MODAL,
-        payload: product
-    }
-}
-
-export const closeModalAction = () => {
-    return {
-        type: CLOSE_MODAL,
-    }
+export const openModalAction = () => {
+    
 }

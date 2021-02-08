@@ -31,7 +31,7 @@ class ProductList extends Component {
 
 const mapStateToProps = (state) => {
   console.log(state.cartItems.cartItems);
-  console.log(state.products.products)
+  console.log(state.products)
     
   return {
         products: state.products.products,

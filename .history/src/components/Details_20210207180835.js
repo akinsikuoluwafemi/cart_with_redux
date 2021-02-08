@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchProductDetail , addToCart, openModalAction, closeModalAction } from '../actions';
+import { fetchProductDetail , addToCart } from '../actions';
 import { Link } from 'react-router-dom';
 import {ButtonContainer } from './Button';
 
@@ -52,11 +52,10 @@ import {ButtonContainer } from './Button';
                   disabled={productDetail.inCart ? true : false}
                   onClick={() => {
                     addToCart(productDetail)
-                    openModalAction(productDetail);
-                    productDetail.count = 1;
-                    productDetail.inCart = true;
-                    const price = productDetail.price;
-                    productDetail.total = price;
+                    // productDetail.count = 1;
+                    // productDetail.inCart = true;
+                    // const price = productDetail.price;
+                    // productDetail.total = price;
 
 
                   }}
@@ -74,14 +73,14 @@ import {ButtonContainer } from './Button';
 
 const mapStateToProps = (state) => {
     console.log(state.cartItems.cartItems);
-    // console.log(state.productDetail.detailProduct)
+    console.log(state.productDetail.detailProduct)
     return {
       productDetail: state.productDetail.detailProduct,
-      cartItems: state.cartItems.cartItems,
+
     };
 }
 
-export default connect(mapStateToProps, {fetchProductDetail, addToCart, openModalAction, closeModalAction}) (Details);
+export default connect(mapStateToProps, {fetchProductDetail, addToCart}) (Details);
 
 
 

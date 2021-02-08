@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { addToCart , fetchProductDetail, openModalAction, closeModalAction } from '../actions';
+import { addToCart , fetchProductDetail } from '../actions';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
@@ -11,7 +11,7 @@ class Product extends Component {
   render(){
       
       // const { products } = this.props;
-        const { products, addToCart, fetchProductDetail, openModalAction, closeModalAction } = this.props;
+        const { products, addToCart, fetchProductDetail } = this.props;
         return (
           <>
             {products.map((product) => {
@@ -37,7 +37,6 @@ class Product extends Component {
                         disabled={product.inCart ? true : false}
                         onClick={() => {
                           addToCart(product);
-                          openModalAction(product)
                           product.count = 1;
                           product.inCart = true;
                           const price = product.price;
@@ -72,13 +71,14 @@ class Product extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
+  console.log(state)
     return {
       detailProduct: state.productDetail.detailProduct
     };
 }
 
 
-export default connect(mapStateToProps, {addToCart, fetchProductDetail, openModalAction, closeModalAction}) (Product);
+export default connect(mapStateToProps, {addToCart, fetchProductDetail}) (Product);
 
 Product.propTypes = {
     products: PropTypes.shape({
