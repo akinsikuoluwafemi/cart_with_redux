@@ -31,8 +31,8 @@ import { Link } from 'react-router-dom';
                           Continue Shopping
                         </ButtonContainer>
                       </Link>
-                      <Link to="/cart">
-                        <ButtonContainer cart onClick={() => closeModalAction()}>
+                      <Link to="/">
+                        <ButtonContainer onClick={() => closeModalAction()}>
                           go to cart
                         </ButtonContainer>
                       </Link>

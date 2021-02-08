@@ -37,12 +37,13 @@ class Product extends Component {
                         disabled={product.inCart ? true : false}
                         onClick={() => {
                           addToCart(product);
+                          openModalAction(product)
                           product.count = 1;
                           product.inCart = true;
                           const price = product.price;
                           product.total = price;
-                          changeModalProductAction(product)
-                          openModalAction()
+                          // changeModalProductAction(product)
+                          // openModalAction()
 
                         }}
                       >

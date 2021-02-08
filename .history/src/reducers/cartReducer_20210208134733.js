@@ -4,11 +4,11 @@ import initialState from './initialState';
 
 
 
-const cartReducer = (state=initialState, action) => {
+const cartReducer = (state=initialState.cartItems, action) => {
     switch(action.type){
         
         case ADD_TO_CART:
-            let tempArr = [...state.cartItems, action.payload];
+            let tempArr = [...state, action.payload];
             return { ...state, cartItems: tempArr };
         
         default:

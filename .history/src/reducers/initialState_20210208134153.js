@@ -4,6 +4,6 @@ export default  {
     detailProduct: JSON.parse(localStorage.getItem("product")) || [],
     products: [],
     cartItems: [],
-    modalOpen: false,
-    modalProduct: []
+    modalOpen: fa,
+    modalProduct: detailProduct
 };

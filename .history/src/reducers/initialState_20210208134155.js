@@ -5,5 +5,5 @@ export default  {
     products: [],
     cartItems: [],
     modalOpen: false,
-    modalProduct: []
+    modalProduct: detailProduct
 };

@@ -4,7 +4,7 @@ import initialState from './initialState';
 
 
 
-const cartReducer = (state=initialState, action) => {
+const cartReducer = (state=initialState.cartItems, action) => {
     switch(action.type){
         
         case ADD_TO_CART:

@@ -11,7 +11,7 @@ class Product extends Component {
   render(){
       
       // const { products } = this.props;
-        const { products, addToCart, fetchProductDetail, openModalAction, changeModalProductAction } = this.props;
+        const { products, addToCart, fetchProductDetail, openModalAction, closeModalAction } = this.props;
         return (
           <>
             {products.map((product) => {
@@ -37,12 +37,12 @@ class Product extends Component {
                         disabled={product.inCart ? true : false}
                         onClick={() => {
                           addToCart(product);
+                          openModalAction(product)
                           product.count = 1;
                           product.inCart = true;
                           const price = product.price;
                           product.total = price;
-                          changeModalProductAction(product)
-                          openModalAction()
+                          changeModalProductAction(produ)
 
                         }}
                       >

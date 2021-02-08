@@ -28,11 +28,11 @@ import { Link } from 'react-router-dom';
                       <h5 className="text-muted">price: ${price}</h5>
                       <Link to="/">
                         <ButtonContainer onClick={() => closeModalAction()}>
-                          Continue Shopping
+                          Store
                         </ButtonContainer>
                       </Link>
                       <Link to="/cart">
-                        <ButtonContainer cart onClick={() => closeModalAction()}>
+                        <ButtonContainer onClick={() => closeModalAction()}>
                           go to cart
                         </ButtonContainer>
                       </Link>
