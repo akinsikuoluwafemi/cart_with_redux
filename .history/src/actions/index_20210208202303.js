@@ -1,4 +1,4 @@
-import { FETCH_PRODUCTS , FETCH_DETAIL_PRODUCT, OPEN_MODAL,CLOSE_MODAL ,MODAL_PRODUCT , ADD_TO_CART, INCREMENT, DECREMENT, REMOVE_ITEM, CLEAR_CART} from './types';
+import { FETCH_PRODUCTS , FETCH_DETAIL_PRODUCT, OPEN_MODAL,CLOSE_MODAL ,MODAL_PRODUCT , ADD_TO_CART, INCREMENT, DECREMENT, REMOVE_ITEM} from './types';
 
 export const fetchProducts = () => {
     return {
@@ -45,7 +45,7 @@ export const closeModalAction = () => {
 }
 
 export const incrementAction = (product) => {
-    console.log('this is increment method')
+    console.log('this')
     return {
         type: INCREMENT,
         payload: product
@@ -53,8 +53,6 @@ export const incrementAction = (product) => {
 }
 
 export const decrementAction = (product) => {
-    console.log("this is decrement method");
-    
     return {
         type: DECREMENT,
         payload: product
@@ -63,17 +61,8 @@ export const decrementAction = (product) => {
 
 
 export const removeItemAction = (product) => {
-    console.log("you removed this item");
-    
     return {
         type: REMOVE_ITEM,
         payload: product
-    }
-}
-
-export const clearCartActiom = () => {
-    console.log('you just cleared the cart');
-    return {
-        type: CLEAR_CART
     }
 }

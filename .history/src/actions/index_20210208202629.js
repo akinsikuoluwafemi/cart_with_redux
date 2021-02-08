@@ -72,8 +72,6 @@ export const removeItemAction = (product) => {
 }
 
 export const clearCartActiom = () => {
-    console.log('you just cleared the cart');
-    return {
-        type: CLEAR_CART
-    }
+    comsole.log('you just cleared the cart');
+    
 }

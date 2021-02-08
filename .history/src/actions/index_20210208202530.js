@@ -70,10 +70,3 @@ export const removeItemAction = (product) => {
         payload: product
     }
 }
-
-export const clearCartActiom = () => {
-    console.log('you just cleared the cart');
-    return {
-        type: CLEAR_CART
-    }
-}

@@ -1,4 +1,4 @@
-import { ADD_TO_CART, INCREMENT, DECREMENT, REMOVE_ITEM, CLEAR_CART } from "../actions/types";
+import { ADD_TO_CART, INCREMENT, DECREMENT, REMOVE_ITEM } from "../actions/types";
 import initialState from './initialState';
 
 
@@ -15,12 +15,6 @@ const cartReducer = (state=initialState, action) => {
 
       case DECREMENT:
       // return { ...state, products: }
-
-        case REMOVE_ITEM:
-            return {...state, cartItems: state.cartItems.filter(item => item.id !== action.payload.id)}
-
-        case CLEAR_CART:
-            return {...state, cartItems: []}
 
       default:
         return state;

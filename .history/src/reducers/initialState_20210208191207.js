@@ -7,6 +7,5 @@ export default  {
     modalOpen: false,
     modalProduct: [],
     cartSubTotal: 0,
-    cartTax: 0,
-    cartTotal: 0
+    cartTax: 0
 };

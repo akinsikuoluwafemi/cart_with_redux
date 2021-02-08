@@ -8,5 +8,4 @@ export default  {
     modalProduct: [],
     cartSubTotal: 0,
     cartTax: 0,
-    cartTotal: 0
 };

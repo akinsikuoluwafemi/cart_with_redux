@@ -16,11 +16,8 @@ const cartReducer = (state=initialState, action) => {
       case DECREMENT:
       // return { ...state, products: }
 
-        case REMOVE_ITEM:
-            return {...state, cartItems: state.cartItems.filter(item => item.id !== action.payload.id)}
-
         case CLEAR_CART:
-            return {...state, cartItems: []}
+            return {...state, cartI}
 
       default:
         return state;
