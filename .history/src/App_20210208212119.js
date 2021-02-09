@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import Details from './components/Details';
 import ProductList from "./components/ProductList";
 import Default from "./components/Default";
-import Cart from "./components/Cart/Cart";
+import Cart from "./components/cart/Cart";
 import { Switch } from 'react-router-dom';
 import Modal from './components/Modal';
 

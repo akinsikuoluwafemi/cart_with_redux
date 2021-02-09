@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
         
         const { modalOpen, closeModalAction, openModalAction, changeModalProductAction, modalProduct } = this.props;
         const { title, img, price } = modalProduct;
-        // console.log(modalOpen)
+        console.log(modalOpen)
        
         return (
           <>
