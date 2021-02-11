@@ -1,5 +1,5 @@
 import { detailProduct } from "../data";
-import { storeProducts as data } from '../data';
+import data from '../data';
 
 export default  {
     detailProduct: JSON.parse(localStorage.getItem("product")) || [],

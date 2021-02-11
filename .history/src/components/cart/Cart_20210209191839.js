@@ -18,7 +18,7 @@ import CartList from './CartList';
               <>
                 <Title name="your" title="cart" />
                 <CartColumns />{" "}
-                <CartList cart={cartItems}/>
+                            <CartList cartItems={ cart}/>
               </>
             )}
           </section>
