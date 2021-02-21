@@ -1,5 +1,6 @@
 import React from 'react';
 import CartItem from './CartItem';
+import {connect } from 'react-redux';
 
 
 
@@ -10,7 +11,7 @@ import CartItem from './CartItem';
         <div className="container-fluid">
             {cart.map(item => {
                 return <CartItem key={item.id} item={item} />
-            })}
+            } )}
       </div>
     );
     

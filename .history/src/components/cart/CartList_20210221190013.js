@@ -10,11 +10,10 @@ import CartItem from './CartItem';
         <div className="container-fluid">
             {cart.map(item => {
                 return <CartItem key={item.id} item={item} />
-            })}
+            } )}
       </div>
     );
     
- }
+}
 
-
-export default  CartList;
+export default CartList;

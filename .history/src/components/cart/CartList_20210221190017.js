@@ -3,6 +3,7 @@ import CartItem from './CartItem';
 
 
 
+
  function CartList(props) {
     const { cart } = props;
     // console.log(cart)
@@ -10,11 +11,10 @@ import CartItem from './CartItem';
         <div className="container-fluid">
             {cart.map(item => {
                 return <CartItem key={item.id} item={item} />
-            })}
+            } )}
       </div>
     );
     
- }
+}
 
-
-export default  CartList;
+export default CartList;
