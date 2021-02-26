@@ -8,5 +8,5 @@ export default combineReducers({
   products: productReducer,
   productDetail: productDetailReducer,
   cartItems: cartReducer,
-  modalOpen: ModalReducer,
+  modalOpen: modalReducer,
 });
