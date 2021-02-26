@@ -18,3 +18,5 @@ export const modalReducer = (state=initialState, action) => {
     
     }
 }
+
+export default modalReducer;
